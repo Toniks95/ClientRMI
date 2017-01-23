@@ -72,7 +72,7 @@ public class InputFrame extends javax.swing.JFrame implements ActionListener{
      * @param size
      */
     private void createArray(){
-        arr = new double [mm.getSize()][mm.getSize()];
+        mm.setArray(new double [mm.getSize()][mm.getSize()]);
         confirmButton.addActionListener(this);
         System.out.println("Utworzylem macierz: "+mm.getSize()+"x"+mm.getSize());
     }  
@@ -89,9 +89,9 @@ public class InputFrame extends javax.swing.JFrame implements ActionListener{
             mm.setEl(i, j, Double.parseDouble(inputElementTextField.getText()));
             
             dLabel.setText("Podales tab["+i+"]["+j+"] = "
-                +arr[i][j]+". Podaj kolejny... ");
+                +mm.getArray()[i][j]+". Podaj kolejny... ");
             inputElementTextField.setText("");
-            System.out.println("tab["+i+"]["+j+"] = "+arr[i][j]); 
+            System.out.println("tab["+i+"]["+j+"] = "+mm.getArray()[i][j]); 
             return true;
         }
         catch(NumberFormatException nfe){
@@ -120,7 +120,6 @@ public class InputFrame extends javax.swing.JFrame implements ActionListener{
         dLabel.setVisible(false);
         confirmButton.setVisible(false);
         inputElementTextField.setVisible(false); 
-        mm.setArray(arr);
     }   
      /**
       * Sets index of array. 

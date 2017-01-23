@@ -87,8 +87,10 @@ public class Matrix {
     }
     
     public void setEl(int i, int j, double element){
-        array[i][j] = element;
+        this.array[i][j] = new Double(element);
     }
+    //Integer num;
+    //num = new Integer(10);
     
     public int getSize() {
         return size;
