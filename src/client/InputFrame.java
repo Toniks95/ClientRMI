@@ -16,7 +16,6 @@ import java.awt.event.KeyEvent;
  */
 public class InputFrame extends javax.swing.JFrame implements ActionListener{
 
-    private double[][] arr; 
     private int i = 0;
     private int j = 0;
     private Matrix mm;
