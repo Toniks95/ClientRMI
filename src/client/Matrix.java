@@ -86,17 +86,15 @@ public class Matrix {
         this.size = size;
     }
     
-    public void setEl(int i, int j, double element){
+    public void setElement(int i, int j, double element){
         this.array[i][j] = new Double(element);
     }
-    //Integer num;
-    //num = new Integer(10);
     
     public int getSize() {
         return size;
     }
     
-    public double getEl(int i, int j){
+    public double getElement(int i, int j){
         return array[i][j];
     }
 

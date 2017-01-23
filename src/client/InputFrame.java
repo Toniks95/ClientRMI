@@ -86,12 +86,12 @@ public class InputFrame extends javax.swing.JFrame implements ActionListener{
     private boolean inputElement(int i, int j){
         try{
             //gets value from inputElementTextField
-            mm.setEl(i, j, Double.parseDouble(inputElementTextField.getText()));
+            mm.setElement(i, j, Double.parseDouble(inputElementTextField.getText()));
             
             dLabel.setText("Podales tab["+i+"]["+j+"] = "
-                +mm.getArray()[i][j]+". Podaj kolejny... ");
+                +mm.getElement(i, j)+". Podaj kolejny... ");
             inputElementTextField.setText("");
-            System.out.println("tab["+i+"]["+j+"] = "+mm.getArray()[i][j]); 
+            System.out.println("tab["+i+"]["+j+"] = "+mm.getElement(i, j)); 
             return true;
         }
         catch(NumberFormatException nfe){

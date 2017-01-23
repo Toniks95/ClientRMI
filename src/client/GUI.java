@@ -138,6 +138,9 @@ public class GUI extends javax.swing.JFrame {
             resultTextField.setText("Błąd danch w macierzy");
             decisionPanel.setVisible(true);
         
+        }catch(NullPointerException npe){
+            resultTextField.setText("Nie wczytano żadnego pliku");
+            System.out.println("Wczytywanie pliku zostalo anulowane ");
         } catch (Exception e){
             resultTextField.setText("Inny błąd !");
             System.out.println("Inny blad podczas wczytywania macierzy");
