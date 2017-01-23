@@ -230,6 +230,7 @@ public class GUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Wyznacznik");
+        setBackground(java.awt.SystemColor.activeCaption);
         setResizable(false);
 
         resultTextField.setDisabledTextColor(new java.awt.Color(0, 0, 0));
